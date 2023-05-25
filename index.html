@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./drawing.js" defer></script>
+    <script src="./logic.js" defer></script>
+    <title>Transport task</title>
+    <style type="text/css">
+    TABLE {
+        border-collapse: collapse; /* Убираем двойные линии между ячейками */
+    }
+    TD, TH {
+        /* width: 80px; */
+        padding: 3px; /* Поля вокруг содержимого таблицы */
+        border: 1px solid rgb(0, 0, 0); /* Параметры рамки */
+    }
+    </style>
+</head>
+<body>
+    Количество поставщиков (m)
+    <select id="count_a">
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+    </select>
+
+    <br><br>
+
+    Количество потрибителей (n)
+    <select id="count_b">
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+    </select>
+
+    <br><br>
+
+    <button id="btn_save_params">Сохранить</button>
+
+    <br><br>
+    <br><br>
+
+    <div id="a_values"></div>
+    <br><br>
+    <div id="b_values"></div>
+    <br>
+    <button id="btn_draw_c_system" style="display: none;">Задать цены</button>
+    <br><br>
+    <br><br>
+
+    <div id="c_values"></div>
+    <br>
+    <button id="btn_solve_northwest_corner" style="display: none;">Решить</button>
+    <button id="btn_clear_table" style="display: none;">Очистить</button>
+    <br><br>
+    <br><br>
+
+    <h2 id="title_1" style="display: none;">Решение методом северо-западного угла</h2>
+    <div id="solved_matrix"></div>
+    <div id="ans_1"></div>
+
+    <h2 id="title_2" style="display: none;">Решение методом потенциалов</h2>
+    <div id="history_solution"></div>
+    <div id="ans_2"></div>
+</body>
+</html>
